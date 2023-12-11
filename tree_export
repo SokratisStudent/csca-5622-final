@@ -1,0 +1,46 @@
+|--- Curricular units 2nd sem (approved) <= 4.50
+|   |--- Curricular units 2nd sem (approved) <= 1.50
+|   |   |--- Curricular units 2nd sem (enrolled) <= 0.50
+|   |   |   |--- Tuition fees up to date <= 0.50
+|   |   |   |   |--- class: Dropout
+|   |   |   |--- Tuition fees up to date >  0.50
+|   |   |   |   |--- class: Graduate
+|   |   |--- Curricular units 2nd sem (enrolled) >  0.50
+|   |   |   |--- class: Dropout
+|   |--- Curricular units 2nd sem (approved) >  1.50
+|   |   |--- Tuition fees up to date <= 0.50
+|   |   |   |--- class: Dropout
+|   |   |--- Tuition fees up to date >  0.50
+|   |   |   |--- Curricular units 2nd sem (approved) <= 3.50
+|   |   |   |   |--- Age at enrollment <= 22.50
+|   |   |   |   |   |--- class: Enrolled
+|   |   |   |   |--- Age at enrollment >  22.50
+|   |   |   |   |   |--- class: Dropout
+|   |   |   |--- Curricular units 2nd sem (approved) >  3.50
+|   |   |   |   |--- Curricular units 1st sem (approved) <= 3.50
+|   |   |   |   |   |--- class: Enrolled
+|   |   |   |   |--- Curricular units 1st sem (approved) >  3.50
+|   |   |   |   |   |--- class: Graduate
+|--- Curricular units 2nd sem (approved) >  4.50
+|   |--- Tuition fees up to date <= 0.50
+|   |   |--- GDP <= 1.90
+|   |   |   |--- class: Dropout
+|   |   |--- GDP >  1.90
+|   |   |   |--- class: Enrolled
+|   |--- Tuition fees up to date >  0.50
+|   |   |--- Curricular units 1st sem (evaluations) <= 8.50
+|   |   |   |--- Curricular units 2nd sem (approved) <= 5.50
+|   |   |   |   |--- Curricular units 2nd sem (enrolled) <= 5.50
+|   |   |   |   |   |--- class: Graduate
+|   |   |   |   |--- Curricular units 2nd sem (enrolled) >  5.50
+|   |   |   |   |   |--- class: Graduate
+|   |   |   |--- Curricular units 2nd sem (approved) >  5.50
+|   |   |   |   |--- class: Graduate
+|   |   |--- Curricular units 1st sem (evaluations) >  8.50
+|   |   |   |--- Curricular units 1st sem (approved) <= 5.50
+|   |   |   |   |--- Curricular units 2nd sem (enrolled) <= 6.50
+|   |   |   |   |   |--- class: Graduate
+|   |   |   |   |--- Curricular units 2nd sem (enrolled) >  6.50
+|   |   |   |   |   |--- class: Enrolled
+|   |   |   |--- Curricular units 1st sem (approved) >  5.50
+|   |   |   |   |--- class: Graduate
