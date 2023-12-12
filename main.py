@@ -154,10 +154,11 @@ def createAdaBoost(dt, features, labels, n_estimators=50, learning_rate=1.0):
 
 
 stump_dt = build_dt(train_features, train_targets, max_depth=1)
-grid = GridSearchCV(createAdaBoost(stump_dt, train_features, train_targets), param_grid=parameters, verbose=5).fit(train_features, train_targets.values.ravel())
-print(grid.best_score_, grid.best_params_)
+#grid = GridSearchCV(createAdaBoost(stump_dt, train_features, train_targets), param_grid=parameters, verbose=5).fit(train_features, train_targets.values.ravel())
+#print(grid.best_score_, grid.best_params_)
 
-ada_boost = createAdaBoost(dt, train_features, train_targets, n_estimators=grid.best_params_['n_estimators'], learning_rate=grid.best_params_['learning_rate'])
+#ada_boost = createAdaBoost(dt, train_features, train_targets, n_estimators=grid.best_params_['n_estimators'], learning_rate=grid.best_params_['learning_rate'])
+ada_boost = createAdaBoost(dt, train_features, train_targets, n_estimators=90, learning_rate=0.3)
 
 print("\nAda-Boosted DT\n")
 test_results = ada_boost.predict(test_features)
